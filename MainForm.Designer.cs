@@ -38,6 +38,8 @@
             this.txtFolder = new System.Windows.Forms.TextBox();
             this.lblTxtToReplace = new System.Windows.Forms.Label();
             this.txtTxtToReplace = new System.Windows.Forms.TextBox();
+            this.rbReplace = new System.Windows.Forms.RadioButton();
+            this.rbPrepend = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,11 +165,35 @@
             this.txtTxtToReplace.Size = new System.Drawing.Size(303, 20);
             this.txtTxtToReplace.TabIndex = 7;
             // 
+            // rbReplace
+            // 
+            this.rbReplace.AutoSize = true;
+            this.rbReplace.Checked = true;
+            this.rbReplace.Location = new System.Drawing.Point(20, 128);
+            this.rbReplace.Name = "rbReplace";
+            this.rbReplace.Size = new System.Drawing.Size(65, 17);
+            this.rbReplace.TabIndex = 2;
+            this.rbReplace.TabStop = true;
+            this.rbReplace.Text = "Replace";
+            this.rbReplace.UseVisualStyleBackColor = true;
+            // 
+            // rbPrepend
+            // 
+            this.rbPrepend.AutoSize = true;
+            this.rbPrepend.Location = new System.Drawing.Point(20, 152);
+            this.rbPrepend.Name = "rbPrepend";
+            this.rbPrepend.Size = new System.Drawing.Size(65, 17);
+            this.rbPrepend.TabIndex = 3;
+            this.rbPrepend.Text = "Prepend";
+            this.rbPrepend.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 318);
+            this.Controls.Add(this.rbPrepend);
+            this.Controls.Add(this.rbReplace);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnGo);
             this.Name = "MainForm";
@@ -176,6 +202,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -191,6 +218,8 @@
         private System.Windows.Forms.TextBox txtFolder;
         private System.Windows.Forms.Label lblTxtToReplace;
         private System.Windows.Forms.TextBox txtTxtToReplace;
+        private System.Windows.Forms.RadioButton rbReplace;
+        private System.Windows.Forms.RadioButton rbPrepend;
     }
 }
 

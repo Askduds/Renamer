@@ -34,7 +34,16 @@ namespace Renamer
             foreach(FileInfo file in files)
             {
                 string originalFilename = file.Name;
-                string filename = originalFilename.Replace(textToFind, textToReplace);
+                string filename = file.Name;
+
+                if (rbReplace.Checked)
+                {
+                    filename = originalFilename.Replace(textToFind, textToReplace);
+                }
+                if (rbPrepend.Checked)
+                {
+                    filename = textToReplace + originalFilename;
+                }
                 System.IO.File.Move(file.FullName, file.Directory + "\\" + filename);
             }
         }
