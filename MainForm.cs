@@ -44,6 +44,10 @@ namespace Renamer
                 {
                     filename = textToReplace + originalFilename;
                 }
+                if(rbPostpend.Checked)
+                {
+                    filename = originalFilename + textToReplace;
+                }
                 System.IO.File.Move(file.FullName, file.Directory + "\\" + filename);
             }
         }

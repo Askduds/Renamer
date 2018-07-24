@@ -40,6 +40,7 @@
             this.txtTxtToReplace = new System.Windows.Forms.TextBox();
             this.rbReplace = new System.Windows.Forms.RadioButton();
             this.rbPrepend = new System.Windows.Forms.RadioButton();
+            this.rbPostpend = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,11 +188,23 @@
             this.rbPrepend.Text = "Prepend";
             this.rbPrepend.UseVisualStyleBackColor = true;
             // 
+            // rbPostpend
+            // 
+            this.rbPostpend.AutoSize = true;
+            this.rbPostpend.Location = new System.Drawing.Point(20, 175);
+            this.rbPostpend.Name = "rbPostpend";
+            this.rbPostpend.Size = new System.Drawing.Size(70, 17);
+            this.rbPostpend.TabIndex = 4;
+            this.rbPostpend.TabStop = true;
+            this.rbPostpend.Text = "Postpend";
+            this.rbPostpend.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 318);
+            this.Controls.Add(this.rbPostpend);
             this.Controls.Add(this.rbPrepend);
             this.Controls.Add(this.rbReplace);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -220,6 +233,7 @@
         private System.Windows.Forms.TextBox txtTxtToReplace;
         private System.Windows.Forms.RadioButton rbReplace;
         private System.Windows.Forms.RadioButton rbPrepend;
+        private System.Windows.Forms.RadioButton rbPostpend;
     }
 }
 
