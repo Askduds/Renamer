@@ -46,7 +46,7 @@
             // 
             // btnGo
             // 
-            this.btnGo.Location = new System.Drawing.Point(405, 283);
+            this.btnGo.Location = new System.Drawing.Point(402, 169);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(75, 23);
             this.btnGo.TabIndex = 0;
@@ -177,6 +177,7 @@
             this.rbReplace.TabStop = true;
             this.rbReplace.Text = "Replace";
             this.rbReplace.UseVisualStyleBackColor = true;
+            this.rbReplace.CheckedChanged += new System.EventHandler(this.rbReplace_CheckedChanged);
             // 
             // rbPrepend
             // 
@@ -187,6 +188,7 @@
             this.rbPrepend.TabIndex = 3;
             this.rbPrepend.Text = "Prepend";
             this.rbPrepend.UseVisualStyleBackColor = true;
+            this.rbPrepend.CheckedChanged += new System.EventHandler(this.rbPrepend_CheckedChanged);
             // 
             // rbPostpend
             // 
@@ -198,19 +200,23 @@
             this.rbPostpend.TabStop = true;
             this.rbPostpend.Text = "Postpend";
             this.rbPostpend.UseVisualStyleBackColor = true;
+            this.rbPostpend.CheckedChanged += new System.EventHandler(this.rbPostpend_CheckedChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 318);
+            this.ClientSize = new System.Drawing.Size(492, 203);
             this.Controls.Add(this.rbPostpend);
             this.Controls.Add(this.rbPrepend);
             this.Controls.Add(this.rbReplace);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnGo);
+            this.MaximumSize = new System.Drawing.Size(508, 242);
+            this.MinimumSize = new System.Drawing.Size(508, 242);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Renamer";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

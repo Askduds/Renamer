@@ -18,6 +18,19 @@ namespace Renamer
             InitializeComponent();
         }
 
+        /// <summary>Changes which bits of the UI are currently enabled or disabled </summary>
+        private void AbleButtons()
+        {
+            if(rbReplace.Checked)
+            {
+                txtTxtToFind.Enabled = true;
+            }
+            else
+            {
+                txtTxtToFind.Enabled = false;
+            }
+        }
+
         private void btnGo_Click(object sender, EventArgs e)
         {
             //TODO : Sanitise literally any of this
@@ -54,7 +67,22 @@ namespace Renamer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            AbleButtons();
+        }
 
+        private void rbReplace_CheckedChanged(object sender, EventArgs e)
+        {
+            AbleButtons();
+        }
+
+        private void rbPrepend_CheckedChanged(object sender, EventArgs e)
+        {
+            AbleButtons();
+        }
+
+        private void rbPostpend_CheckedChanged(object sender, EventArgs e)
+        {
+            AbleButtons();
         }
     }
 }
